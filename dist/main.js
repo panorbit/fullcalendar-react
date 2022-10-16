@@ -1,7 +1,7 @@
 import { __assign, __extends } from "tslib";
-import './vdom';
-import * as React from 'react';
-import { CalendarApi, CalendarDataProvider, CalendarContent, CalendarRoot } from '@fullcalendar/common';
+import "./vdom";
+import * as React from "react";
+import { CalendarApi, CalendarDataProvider, CalendarContent, CalendarRoot, } from "@fullcalendar/common";
 var FullCalendar = /** @class */ (function (_super) {
     __extends(FullCalendar, _super);
     function FullCalendar() {
@@ -10,7 +10,8 @@ var FullCalendar = /** @class */ (function (_super) {
         return _this;
     }
     FullCalendar.prototype.render = function () {
-        return (React.createElement(CalendarDataProvider, { optionOverrides: this.props, calendarApi: this._calendarApi }, function (data) { return (React.createElement(CalendarRoot, { options: data.calendarOptions, theme: data.theme, emitter: data.emitter }, function (classNames, height, isHeightAuto, forPrint) { return (React.createElement("div", { className: classNames.join(' '), style: { height: height } },
+        return (React.createElement(CalendarDataProvider, { optionOverrides: this.props, calendarApi: this._calendarApi }, function (data) { return (React.createElement(CalendarRoot, { options: data.calendarOptions, theme: data.theme, emitter: data.emitter }, function (classNames, height, isHeightAuto, forPrint) { return (React.createElement("div", { className: classNames.join(" "), style: { height: height } },
+            React.createElement("span", null, "Test check"),
             React.createElement(CalendarContent, __assign({ isHeightAuto: isHeightAuto, forPrint: forPrint }, data)))); })); }));
     };
     FullCalendar.prototype.getApi = function () {
@@ -20,5 +21,5 @@ var FullCalendar = /** @class */ (function (_super) {
 }(React.Component));
 export default FullCalendar;
 // export all important utils/types
-export * from '@fullcalendar/common';
+export * from "@fullcalendar/common";
 //# sourceMappingURL=main.js.map

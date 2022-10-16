@@ -20,6 +20,5 @@ function flushSync(callback) {
     // always sync from top-level
     callback();
 }
-//# sourceMappingURL=vdom.js.map
 
 exports.flushSync = flushSync;

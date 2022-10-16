@@ -12,7 +12,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fullcalendar/fullcalendar-react.git"
+    "url": "https://github.com/vinayv-456/fullcalendar-react.git"
   },
   "main": "dist/main.cjs.js",
   "module": "dist/main.js",

@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "@fullcalendar/common": "~5.11.2",
+    "@fullcalendar/timegrid": "^5.11.3",
     "tslib": "^2.1.0"
   },
   "peerDependencies": {

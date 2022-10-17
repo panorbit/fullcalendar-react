@@ -25,7 +25,7 @@ export default class FullCalendar extends React.Component<CalendarOptions> {
           >
             {(classNames, height, isHeightAuto, forPrint) => (
               <div className={classNames.join(" ")} style={{ height }}>
-                <span>Final check</span>
+                <span>Finalll check</span>
                 <CalendarContent
                   isHeightAuto={isHeightAuto}
                   forPrint={forPrint}

@@ -1,7 +1,7 @@
 
 # /dist
 /tmp
-
+/examples
 /node_modules
 package-lock.json
 npm-debug.log

@@ -12,7 +12,6 @@ export default class FullCalendar extends React.Component<CalendarOptions> {
   private _calendarApi = new CalendarApi();
 
   render() {
-    console.log("test-2 devvv");
     return (
       <CalendarDataProvider
         optionOverrides={this.props}
@@ -26,7 +25,7 @@ export default class FullCalendar extends React.Component<CalendarOptions> {
           >
             {(classNames, height, isHeightAuto, forPrint) => (
               <div className={classNames.join(" ")} style={{ height }}>
-                <span>Test check</span>
+                <span>Final check</span>
                 <CalendarContent
                   isHeightAuto={isHeightAuto}
                   forPrint={forPrint}

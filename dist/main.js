@@ -10,9 +10,8 @@ var FullCalendar = /** @class */ (function (_super) {
         return _this;
     }
     FullCalendar.prototype.render = function () {
-        console.log("test-2 devvv");
         return (React.createElement(CalendarDataProvider, { optionOverrides: this.props, calendarApi: this._calendarApi }, function (data) { return (React.createElement(CalendarRoot, { options: data.calendarOptions, theme: data.theme, emitter: data.emitter }, function (classNames, height, isHeightAuto, forPrint) { return (React.createElement("div", { className: classNames.join(" "), style: { height: height } },
-            React.createElement("span", null, "Test check"),
+            React.createElement("span", null, "Final check"),
             React.createElement(CalendarContent, __assign({ isHeightAuto: isHeightAuto, forPrint: forPrint }, data)))); })); }));
     };
     FullCalendar.prototype.getApi = function () {

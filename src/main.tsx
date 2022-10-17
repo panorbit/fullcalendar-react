@@ -12,6 +12,7 @@ export default class FullCalendar extends React.Component<CalendarOptions> {
   private _calendarApi = new CalendarApi();
 
   render() {
+    console.log("test-2 devvv");
     return (
       <CalendarDataProvider
         optionOverrides={this.props}

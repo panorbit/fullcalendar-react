@@ -48,7 +48,9 @@
     "fontawesome-free": "^1.0.4",
     "moment": "^2.29.4",
     "react-date-range": "^1.4.0",
-    "tslib": "^2.1.0"
+    "tslib": "^2.1.0",
+    "patch-package": "^6.4.7",
+    "postinstall-postinstall": "^2.1.0"
   },
   "peerDependencies": {
     "react": "^16.7.0 || ^17 || ^18",
@@ -84,8 +86,6 @@
     "karma-jasmine": "^4.0.1",
     "karma-sourcemap-loader": "^0.3.8",
     "karma-spec-reporter": "^0.0.32",
-    "patch-package": "^6.4.7",
-    "postinstall-postinstall": "^2.1.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "rollup": "^1.31.0",

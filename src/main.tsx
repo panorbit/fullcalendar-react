@@ -1,5 +1,6 @@
 import "./vdom";
 import * as React from "react";
+
 import {
   CalendarOptions,
   CalendarApi,
@@ -7,14 +8,26 @@ import {
   CalendarContent,
   CalendarRoot,
 } from "@fullcalendar/common";
-
+import DatePicker from "./DatePicker";
 export default class FullCalendar extends React.Component<CalendarOptions> {
   private _calendarApi = new CalendarApi();
 
   render() {
     return (
       <CalendarDataProvider
-        optionOverrides={this.props}
+        optionOverrides={{
+          ...this.props,
+          customButtons: {
+            ...this.props.customButtons,
+            // add datepicker as predefined
+            datePicker: {
+              text: "datePicker",
+              hint: "Date Picker",
+              // click: this.handleDatePicker,
+              component: DatePicker,
+            },
+          },
+        }}
         calendarApi={this._calendarApi}
       >
         {(data) => (
@@ -25,7 +38,6 @@ export default class FullCalendar extends React.Component<CalendarOptions> {
           >
             {(classNames, height, isHeightAuto, forPrint) => (
               <div className={classNames.join(" ")} style={{ height }}>
-                <span>Finalll check</span>
                 <CalendarContent
                   isHeightAuto={isHeightAuto}
                   forPrint={forPrint}
@@ -43,6 +55,5 @@ export default class FullCalendar extends React.Component<CalendarOptions> {
     return this._calendarApi;
   }
 }
-
 // export all important utils/types
 export * from "@fullcalendar/common";

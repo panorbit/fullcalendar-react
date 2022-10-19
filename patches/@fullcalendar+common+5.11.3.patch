@@ -1,0 +1,39 @@
+diff --git a/node_modules/@fullcalendar/common/main.js b/node_modules/@fullcalendar/common/main.js
+index 8ca3818..1e0168b 100644
+--- a/node_modules/@fullcalendar/common/main.js
++++ b/node_modules/@fullcalendar/common/main.js
+@@ -6377,8 +6377,14 @@ theme, viewSpecs, calendarApi) {
+         var buttonIcon; // only one of these will be set
+         var buttonText; // "
+         var buttonHint;
++        var component;
++        var calendarApiInstance;
+         // ^ for the title="" attribute, for accessibility
+         if ((customButtonProps = calendarCustomButtons[buttonName])) {
++            if (buttonName === 'datePicker') {
++                component=customButtonProps.component
++                calendarApiInstance=calendarApi
++            }
+             buttonClick = function (ev) {
+                 if (customButtonProps.click) {
+                     customButtonProps.click.call(ev.target, ev, ev.target); // TODO: use Calendar this context?
+@@ -6427,7 +6433,7 @@ theme, viewSpecs, calendarApi) {
+                 ], calendarButtonText[buttonName]); };
+             }
+         }
+-        return { buttonName: buttonName, buttonClick: buttonClick, buttonIcon: buttonIcon, buttonText: buttonText, buttonHint: buttonHint };
++        return { buttonName: buttonName, buttonClick: buttonClick, buttonIcon: buttonIcon, buttonText: buttonText, buttonHint: buttonHint, component, calendarApi: calendarApiInstance };
+     })); });
+     return { widgets: widgets, viewsWithButtons: viewsWithButtons, hasTitle: hasTitle };
+ }
+@@ -7761,6 +7767,10 @@ var ToolbarSection = /** @class */ (function (_super) {
+                 isOnlyButtons = false;
+                 children.push(createElement("h2", { className: "fc-toolbar-title", id: props.titleId }, props.title));
+             }
++            else if(buttonName === "datePicker"){
++                console.log("component", widget, widget.component);
++                children.push(createElement(widget.component, {calendarApi:widget.calendarApi}));
++            } 
+             else {
+                 var isPressed = buttonName === props.activeButton;
+                 var isDisabled = (!props.isTodayEnabled && buttonName === 'today') ||

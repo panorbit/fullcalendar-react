@@ -1,6 +1,6 @@
 {
   "name": "@fullcalendar/react",
-  "version": "5.11.5",
+  "version": "5.11.6",
   "title": "FullCalendar React Component",
   "description": "An official FullCalendar component for React",
   "keywords": [
@@ -37,11 +37,17 @@
     "test": "npm run rollup:tests && npm run karma",
     "test:watch": "npm run rollup:tests && concurrently 'npm:rollup:tests:watch' 'npm:karma:watch'",
     "lint": "eslint -c eslint.config.js tests --ext .js,.jsx --no-eslintrc",
-    "ci": "./scripts/ci.sh"
+    "ci": "./scripts/ci.sh",
+    "postinstall": "patch-package"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@fullcalendar/common": "~5.11.2",
-    "@fullcalendar/timegrid": "^5.11.3",
+    "fontawesome-free": "^1.0.4",
+    "moment": "^2.29.4",
+    "react-date-range": "^1.4.0",
     "tslib": "^2.1.0"
   },
   "peerDependencies": {
@@ -78,6 +84,8 @@
     "karma-jasmine": "^4.0.1",
     "karma-sourcemap-loader": "^0.3.8",
     "karma-spec-reporter": "^0.0.32",
+    "patch-package": "^6.4.7",
+    "postinstall-postinstall": "^2.1.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "rollup": "^1.31.0",

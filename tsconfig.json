@@ -4,20 +4,14 @@
     "target": "es5",
     "module": "es6",
     "moduleResolution": "node",
-    "lib": [
-      "dom",
-      "es2015",
-      "scripthost"
-    ],
+    "lib": ["dom", "es2015", "scripthost"],
     "allowSyntheticDefaultImports": true,
     "importHelpers": true,
     "sourceMap": true,
     "declaration": true,
     "rootDir": "src",
-    "outDir": "dist"
+    "outDir": "dist",
+    "allowJs": true
   },
-  "files": [
-    "src/main.tsx",
-    "src/vdom-test-react18.ts"
-  ]
+  "files": ["src/main.tsx", "src/DatePicker.jsx", "src/vdom-test-react18.ts"]
 }

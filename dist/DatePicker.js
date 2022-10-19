@@ -3,7 +3,7 @@ import moment from "moment";
 import React, { useEffect, useState } from "react";
 import { DateRange } from "react-date-range";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import FontAwesomeIcon from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 var DatePicker = function (_a) {
     var _b, _c, _d;
     var calendarApiObjProp = _a.calendarApi;

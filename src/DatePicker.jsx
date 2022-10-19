@@ -2,7 +2,7 @@ import moment from "moment";
 import React, { useEffect, useState } from "react";
 import { DateRange } from "react-date-range";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import FontAwesomeIcon from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const DatePicker = ({ calendarApi: calendarApiObjProp }) => {
   const [showDropdown, setShowDropdown] = useState(false);

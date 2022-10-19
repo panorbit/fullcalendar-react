@@ -1,0 +1,50 @@
+{
+  "private": true,
+  "name": "@fullcalendar-example-projects/react",
+  "title": "FullCalendar React Example Project",
+  "version": "0.0.0",
+  "license": "ISC",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack serve",
+    "postinstall": "patch-package"
+  },
+  "dependencies": {
+    "@fullcalendar/common": "^5.11.3",
+    "@fullcalendar/core": "^5.11.2",
+    "@fullcalendar/daygrid": "^5.11.2",
+    "@fullcalendar/interaction": "^5.11.2",
+    "@fullcalendar/react": "https://github.com/vinayv-456/fullcalendar-react.git",
+    "@fullcalendar/timegrid": "^5.11.2",
+    "moment": "^2.29.4",
+    "react": "^18.0.0",
+    "react-date-range": "^1.4.0",
+    "react-dom": "^18.0.0",
+    "styled-components": "^5.3.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/helper-plugin-utils": "^7.19.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-dynamic-import": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-transform-modules-amd": "^7.0.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.0.0",
+    "@babel/plugin-transform-modules-systemjs": "^7.0.0",
+    "@babel/preset-env": "^7.0.0-beta.51",
+    "@babel/preset-react": "^7.0.0-beta.51",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.3.0",
+    "html-webpack-plugin": "^4.5.0",
+    "patch-package": "^6.4.7",
+    "postinstall-postinstall": "^2.1.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.3.0",
+    "webpack-cli": "^4.1.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

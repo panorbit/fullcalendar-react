@@ -2,7 +2,8 @@ import { __assign, __extends } from "tslib";
 import "./vdom";
 import * as React from "react";
 import { CalendarApi, CalendarDataProvider, CalendarContent, CalendarRoot, } from "@fullcalendar/common";
-import DatePicker from "./DatePicker";
+import DatePicker from "./components/DatePicker";
+import ViewTypeSelection from "./components/ViewTypeSelection/ViewTypeSelection";
 var FullCalendar = /** @class */ (function (_super) {
     __extends(FullCalendar, _super);
     function FullCalendar() {
@@ -18,6 +19,11 @@ var FullCalendar = /** @class */ (function (_super) {
                         hint: "Date Picker",
                         // click: this.handleDatePicker,
                         component: DatePicker,
+                    }, viewTypeSelection: {
+                        text: "viewTypeSelection",
+                        hint: "View Type Selection",
+                        // click: this.handleDatePicker,
+                        component: ViewTypeSelection,
                     } }) }), calendarApi: this._calendarApi }, function (data) { return (React.createElement(CalendarRoot, { options: data.calendarOptions, theme: data.theme, emitter: data.emitter }, function (classNames, height, isHeightAuto, forPrint) { return (React.createElement("div", { className: classNames.join(" "), style: { height: height } },
             React.createElement(CalendarContent, __assign({ isHeightAuto: isHeightAuto, forPrint: forPrint }, data)))); })); }));
     };

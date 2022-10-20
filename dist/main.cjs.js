@@ -8,7 +8,8 @@ var tslib = require('tslib');
 require('./vdom.cjs');
 var React = require('react');
 var common = require('@fullcalendar/common');
-var DatePicker = _interopDefault(require('./DatePicker'));
+var DatePicker = _interopDefault(require('./components/DatePicker'));
+var ViewTypeSelection = _interopDefault(require('./components/ViewTypeSelection/ViewTypeSelection'));
 
 var FullCalendar = /** @class */ (function (_super) {
     tslib.__extends(FullCalendar, _super);
@@ -25,6 +26,11 @@ var FullCalendar = /** @class */ (function (_super) {
                         hint: "Date Picker",
                         // click: this.handleDatePicker,
                         component: DatePicker,
+                    }, viewTypeSelection: {
+                        text: "viewTypeSelection",
+                        hint: "View Type Selection",
+                        // click: this.handleDatePicker,
+                        component: ViewTypeSelection,
                     } }) }), calendarApi: this._calendarApi }, function (data) { return (React.createElement(common.CalendarRoot, { options: data.calendarOptions, theme: data.theme, emitter: data.emitter }, function (classNames, height, isHeightAuto, forPrint) { return (React.createElement("div", { className: classNames.join(" "), style: { height: height } },
             React.createElement(common.CalendarContent, tslib.__assign({ isHeightAuto: isHeightAuto, forPrint: forPrint }, data)))); })); }));
     };

@@ -2,7 +2,7 @@ import { __assign } from "tslib";
 import moment from "moment";
 import React, { useEffect, useState } from "react";
 import { DateRange } from "react-date-range";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 var DatePicker = function (_a) {
     var _b, _c, _d;
@@ -71,7 +71,7 @@ var DatePicker = function (_a) {
         React.createElement("div", null,
             React.createElement("h2", { onClick: function () { return setShowDropdown(function (prev) { return !prev; }); } }, (_c = calendarApiObj === null || calendarApiObj === void 0 ? void 0 : calendarApiObj.data) === null || _c === void 0 ? void 0 :
                 _c.viewTitle,
-                React.createElement(FontAwesomeIcon, { icon: faAngleDown })),
+                React.createElement(FontAwesomeIcon, { icon: showDropdown ? faAngleUp : faAngleDown })),
             showDropdown && (React.createElement("div", { style: {
                     position: "absolute",
                 } },

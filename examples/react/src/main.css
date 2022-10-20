@@ -64,3 +64,11 @@ b {
   display: flex;
   align-items: center;
 }
+
+.view-selection-container {
+  position: relative;
+  margin-left: 2rem;
+  z-index: 999999999;
+  display: flex;
+  align-items: center;
+}

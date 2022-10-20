@@ -32,7 +32,8 @@ export default class DemoApp extends React.Component {
               left: "datePicker",
               // center: "title",
               // center: "datePicker",
-              right: "today prev,next dayGridMonth,timeGridWeek,timeGridDay",
+              right: "today prev,next,viewTypeSelection",
+              //dayGridMonth,timeGridWeek,timeGridDay",
             }}
             initialView="dayGridMonth"
             editable={true}

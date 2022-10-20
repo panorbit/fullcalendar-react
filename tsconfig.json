@@ -13,5 +13,11 @@
     "outDir": "dist",
     "allowJs": true
   },
-  "files": ["src/main.tsx", "src/DatePicker.jsx", "src/vdom-test-react18.ts"]
+  "include": ["src/components/*"],
+  "files": [
+    "src/main.tsx",
+    // "src/DatePicker.jsx",
+    // "src/ViewTypeSelection.jsx",
+    "src/vdom-test-react18.ts"
+  ]
 }

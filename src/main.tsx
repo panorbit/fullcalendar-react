@@ -8,7 +8,8 @@ import {
   CalendarContent,
   CalendarRoot,
 } from "@fullcalendar/common";
-import DatePicker from "./DatePicker";
+import DatePicker from "./components/DatePicker";
+import ViewTypeSelection from "./components/ViewTypeSelection/ViewTypeSelection";
 export default class FullCalendar extends React.Component<CalendarOptions> {
   private _calendarApi = new CalendarApi();
 
@@ -25,6 +26,12 @@ export default class FullCalendar extends React.Component<CalendarOptions> {
               hint: "Date Picker",
               // click: this.handleDatePicker,
               component: DatePicker,
+            },
+            viewTypeSelection: {
+              text: "viewTypeSelection",
+              hint: "View Type Selection",
+              // click: this.handleDatePicker,
+              component: ViewTypeSelection,
             },
           },
         }}

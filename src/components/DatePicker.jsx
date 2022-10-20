@@ -1,7 +1,7 @@
 import moment from "moment";
 import React, { useEffect, useState } from "react";
 import { DateRange } from "react-date-range";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const DatePicker = ({ calendarApi: calendarApiObjProp }) => {
@@ -81,7 +81,9 @@ const DatePicker = ({ calendarApi: calendarApiObjProp }) => {
       <div>
         <h2 onClick={() => setShowDropdown((prev) => !prev)}>
           {calendarApiObj?.data?.viewTitle}
-          <FontAwesomeIcon icon={faAngleDown}></FontAwesomeIcon>
+          <FontAwesomeIcon
+            icon={showDropdown ? faAngleUp : faAngleDown}
+          ></FontAwesomeIcon>
         </h2>
         {showDropdown && (
           <div
